@@ -1,0 +1,14 @@
+unit RttiUtils;
+
+interface
+
+type
+  TRttiUtils = class
+  private
+  public
+    class procedure ExecutarMertodo<T:Class>(Sender:T;ametodo:string;aparam:string);
+  end;
+
+implementation
+
+end.

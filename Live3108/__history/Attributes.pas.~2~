@@ -1,0 +1,23 @@
+unit Attributes;
+
+interface
+
+type
+  TDescricao = class(TCustomAttribute)
+  private
+    FDescricao: String;
+  public
+    constructor Create(const Descricao: String);
+    property Descricao: String read FDescricao;
+  end;
+
+implementation
+
+{ TDescricao }
+
+constructor TDescricao.Create(const Descricao: String);
+begin
+  FDescricao := Descricao;
+end;
+
+end.

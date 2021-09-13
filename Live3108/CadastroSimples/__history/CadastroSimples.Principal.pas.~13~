@@ -1,0 +1,95 @@
+unit CadastroSimples.Principal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Datasnap.DBClient,Rtti,
+  System.Generics.Collections, CadastroSimples.Clientes, CadastroSimples.ClientesDTO;
+
+type
+  TForm2 = class(TForm)
+    edtNome: TLabeledEdit;
+    edtCodigo: TLabeledEdit;
+    cmbEstadoCivil: TComboBox;
+    Label1: TLabel;
+    RadioGroup1: TRadioGroup;
+    DateTimePicker1: TDateTimePicker;
+    Label2: TLabel;
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    ClientDataSet1: TClientDataSet;
+    procedure FormCreate(Sender: TObject);
+  private
+    FListaClientes: TObjectList<TClientes>;
+
+    procedure PreencherDataSet;
+    procedure PreencheCampos(Clientes : TClientes);
+    function AddCliente(aValues: array of variant): TClientes;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+{ TForm2 }
+
+function TForm2.AddCliente(aValues: array of variant): TClientes;
+begin
+  Result := TClientesDTO.New
+    .Codigo(aValues[0])
+    .Nome(aValues[1])
+    .EstadoCivil(aValues[2])
+    .Sexo(aVAlues[3])
+    .DataNascimento(aValues[4])
+    .Build;
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  FListaClientes := TObjectList<TClientes>.Create;
+  FListaClientes.Add(AddCliente(['0','Alessandro Medeiros','Casado(a)','Masculino','22/01/1985']));
+  FListaClientes.Add(AddCliente(['0','Aline Medeiros','Casado(a)','Feminino','22/01/1985']));
+  FListaClientes.Add(AddCliente(['0','Kauan Medeiros','Solteiro(a)','Masculino','22/01/1985']));
+  FListaClientes.Add(AddCliente(['0','Kelvin Medeiros','Solteiro(a)','Masculino','22/01/1985']));
+
+  PreencherDataSet;
+end;
+
+procedure TForm2.PreencheCampos(Clientes: TClientes);
+begin
+
+end;
+
+procedure TForm2.PreencherDataSet;
+var
+  Contexto: TRttiContext;
+  Tipo: TRttiType;
+  PropriedadeNome : TRttiProperty;
+  Clientes: TClientes;
+begin
+  Contexto:= TRttiContext.Create;
+  try
+    Tipo := Contexto.GetType(TClientes.ClassInfo);
+
+    PropriedadeNome := Tipo.GetProperty('Nome');
+
+    for Clientes in FListaClientes do
+      ClientDataSet1.AppendRecord([PropriedadeNome.GetValue(Clientes).AsString]);
+
+    ClientDataSet1.First;
+  finally
+    Contexto.Free;
+  end;
+end;
+
+initialization
+  ReportMemoryLeaksOnShutdown := True;
+
+end.

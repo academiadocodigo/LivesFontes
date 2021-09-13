@@ -1,0 +1,119 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 242
+  ClientWidth = 436
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 53
+    Width = 55
+    Height = 13
+    Caption = 'Estado Civil'
+  end
+  object Label2: TLabel
+    Left = 319
+    Top = 53
+    Width = 81
+    Height = 13
+    Caption = 'Data Nascimento'
+  end
+  object edtNome: TLabeledEdit
+    Left = 63
+    Top = 24
+    Width = 362
+    Height = 21
+    EditLabel.Width = 27
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Nome'
+    TabOrder = 0
+  end
+  object edtCodigo: TLabeledEdit
+    Left = 8
+    Top = 24
+    Width = 49
+    Height = 21
+    EditLabel.Width = 33
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Codigo'
+    TabOrder = 1
+  end
+  object cmbEstadoCivil: TComboBox
+    Left = 8
+    Top = 72
+    Width = 97
+    Height = 21
+    TabOrder = 2
+    Items.Strings = (
+      'Solteiro(a)'
+      'Casado(a)'
+      'Vi'#250'vo(a)'
+      'Divorciado(a)')
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 128
+    Top = 53
+    Width = 185
+    Height = 40
+    Caption = 'Sexo'
+    Columns = 2
+    Items.Strings = (
+      'Masculino'
+      'Feminino')
+    TabOrder = 3
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 319
+    Top = 72
+    Width = 106
+    Height = 21
+    Date = 44438.000000000000000000
+    Time = 0.955457685187866400
+    TabOrder = 4
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 101
+    Width = 417
+    Height = 133
+    DataSource = DataSource1
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 328
+    Top = 184
+  end
+  object ClientDataSet1: TClientDataSet
+    PersistDataPacket.Data = {
+      330000009619E0BD0100000018000000010000000000030000003300044E6F6D
+      6501004900000001000557494454480200020032000000}
+    Active = True
+    Aggregates = <>
+    FieldDefs = <
+      item
+        Name = 'Nome'
+        DataType = ftString
+        Size = 50
+      end>
+    IndexDefs = <>
+    Params = <>
+    StoreDefs = True
+    Left = 256
+    Top = 152
+  end
+end

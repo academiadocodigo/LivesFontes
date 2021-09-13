@@ -1,0 +1,154 @@
+unit Boleto;
+
+interface
+
+uses
+  typinfo,
+  System.SysUtils,
+  Vcl.Dialogs,
+  System.Variants,
+  Attributes,
+  RTTI, System.Generics.Collections, System.Classes;
+
+type
+  TBoleto = class
+  private
+    FDescDoc: string;
+    FCodigoBanco: integer;
+    FValorEfetivo: real;
+    FDataVenc: TDateTime;
+
+    procedure ValidarDados;
+  //Comentado devido o erro W1055 PUBLISHED caused RTTI ($M+) to be added to type 'TBoleto'
+  //published
+  public
+    [TDescricao('Descrição do documento')]
+    property DescDoc: string read FDescDoc write FDescDoc;
+    [TDescricao('Código da instituição bancária')]
+    property CodigoBanco: integer read FCodigoBanco write FCodigoBanco;
+    [TDescricao('Valor do boleto')]
+    property ValorEfetivo: real read FValorEfetivo write FValorEfetivo;
+    [TDescricao('Data de vencimento do boleto')]
+    property DataVenc: TDateTime read FDataVenc write FDataVenc;
+  //public
+    procedure Salvar;
+  end;
+
+implementation
+
+{ TBoleto }
+
+procedure TBoleto.Salvar;
+begin
+  ValidarDados;
+end;
+
+//
+//  Implementações erradas do dia a dia
+//
+//procedure TBoleto.ValidarDados;
+//begin
+//  if FDescDoc = EmptyStr then
+//  begin
+//    ShowMessage('Valor não preenchido: Descrição');
+//    Abort;
+//  end;
+//
+//  if FCodigoBanco = 0 then
+//  begin
+//    ShowMessage('Valor não preenchido: Código do banco');
+//    Abort;
+//  end;
+//
+//  if FValorEfetivo <= 0 then
+//  begin
+//    ShowMessage('Valor não preenchido: Valor');
+//    Abort;
+//  end;
+//
+//  if DataVenc = 0 then
+//  begin
+//    ShowMessage('Valor não preenchido: Data de Vencimento');
+//    Abort;
+//  end;
+//end;
+
+//
+// Uma melhoria na implementação da validação
+//
+//procedure TBoleto.ValidarDados;
+//var
+//  ListaPropriedades: TPropList;
+//  Contador: Integer;
+//  Preenchido: Boolean;
+//  Valor: Variant;
+//begin
+//  //Preenche uma lista com as propriedades do objeto
+//  GetPropList(TypeInfo(TBoleto), tkAny, @ListaPropriedades);
+//
+//  //Executa um loop nas propriedades do objeto
+//  for Contador := Low(ListaPropriedades) to High(ListaPropriedades) do begin
+//    //obtem o valor da propriedade
+//    Valor := GetPropValue(Self, ListaPropriedades[Contador]^.Name);
+//
+//    //Valida o valor, exiginfo que seja diferente de 0 e diferente de vazio
+//    Preenchido := (VarToStr(Valor) <> EmptyStr) and (VarToStr(Valor) <> '0');
+//
+//    if not Preenchido then begin
+//      ShowMessage('Valor não preenchido: ' + ListaPropriedades[Contador]^.Name);
+//      Abort;
+//    end;
+//  end;
+//end;
+
+
+procedure TBoleto.ValidarDados;
+var
+  Contexto: TRttiContext;
+  Tipo: TRttiType;
+  Propriedade: TRttiProperty;
+  Atributo: TCustomAttribute;
+  Valor: variant;
+  Preenchido: boolean;
+  ListaMensagem: TStringList;
+begin
+  //Cria lista para mensagem do erro
+  ListaMensagem := TStringList.Create;
+
+  // Cria o contexto do RTTI
+  Contexto := TRttiContext.Create;
+
+  // Obtém as informações de RTTI da classe TBoleto
+  Tipo := Contexto.GetType(TBoleto.ClassInfo);
+
+  // Executa um loop nas propriedades do objeto
+  for Propriedade in Tipo.GetProperties do
+  begin
+    // Obtém o valor da propriedade
+    Valor := Propriedade.GetValue(Self).AsVariant;
+
+    // Valida o valor, exigindo que seja diferente de 0 e diferente de vazio
+    Preenchido := (VarToStr(Valor) <> EmptyStr) and (VarToStr(Valor) <> '0');
+
+    // Se não estiver preenchido, entra no loop dos atributos
+    if not Preenchido then
+
+      // Executa um loop nos atributos da propriedade
+      for Atributo in Propriedade.GetAttributes do
+
+        // Verifica se o atributo é do tipo TDescricao
+        if Atributo is TDescricao then
+          ListaMensagem.Add((Atributo as TDescricao).Descricao);
+//        begin
+//          // Exibe a mensagem com a descrição que definimos para a propriedade
+//          ShowMessage('Valor não preenchido: ' + (Atributo as TDescricao).Descricao);
+//          Abort;
+//        end;
+  end;
+  if ListaMensagem.Count>0 then
+    ShowMessage('Valor(es) não preenchido(s)' + #13 + ListaMensagem.Text);
+
+  ListaMensagem.DisposeOf;
+end;
+
+end.

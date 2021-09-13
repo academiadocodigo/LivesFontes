@@ -1,0 +1,21 @@
+unit RttiUtils;
+
+interface
+
+type
+  TRttiUtils = class
+  private
+  public
+    class procedure ValidarCampo(aObject : TObject);
+  end;
+
+implementation
+
+{ TRttiUtils }
+
+class procedure TRttiUtils.ValidarCampo(aObject: TObject);
+begin
+
+end;
+
+end.

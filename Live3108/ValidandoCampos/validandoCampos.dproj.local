@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/18 13:30:13.000.280,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/18 14:14:49.000.524,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/31 07:08:03.000.114,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/31 07:08:25.000.013,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit1.pas=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/31 07:08:25.000.013,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit1.dfm=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/08/31 07:08:27.000.123,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Project1.dproj=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/08/31 07:08:58.000.484,=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit2.pas</Transaction>
+    <Transaction>2021/08/31 07:09:43.000.134,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Pessoa.pas=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit2.pas</Transaction>
+    <Transaction>2021/08/31 07:09:52.000.345,=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit2.pas</Transaction>
+    <Transaction>2021/08/31 07:11:14.000.080,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\DAO.pas=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit2.pas</Transaction>
+    <Transaction>2021/08/31 07:13:04.000.464,=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit2.pas</Transaction>
+    <Transaction>2021/08/31 07:13:54.000.371,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\RttiUtils.pas=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Unit2.pas</Transaction>
+    <Transaction>2021/08/31 09:49:17.000.057,C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\validandoCampos.dproj=C:\Users\Criacao\Desktop\Live3108\ValidandoCampos\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

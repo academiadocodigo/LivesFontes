@@ -1,0 +1,42 @@
+unit RttiUtils;
+
+interface
+
+type
+  NotNull = class(TCustomAttribute)
+  private
+    FMensagem: String;
+    procedure SetMensagem(const Value: String);
+  public
+    constructor Create(aMsg : String);
+    property Mensagem : String read FMensagem write SetMensagem;
+  end;
+
+  TRttiUtils = class
+  private
+  public
+    class procedure ValidarCampo(aObject : TObject);
+  end;
+
+implementation
+
+{ TRttiUtils }
+
+class procedure TRttiUtils.ValidarCampo(aObject: TObject);
+begin
+
+end;
+
+{ NotNull }
+
+constructor NotNull.Create(aMsg: String);
+begin
+  FMensagem := aMsg;
+end;
+
+procedure NotNull.SetMensagem(const Value: String);
+begin
+  FMensagem := Value;
+end;
+
+end.

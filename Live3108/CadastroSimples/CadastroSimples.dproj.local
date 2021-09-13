@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/18 13:30:13.000.280,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/18 14:14:49.000.524,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/30 22:33:42.000.359,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/08/30 22:34:08.000.395,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\CadastroSimples.Principal.pas</Transaction>
+    <Transaction>2021/08/30 22:34:08.000.395,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\CadastroSimples.Principal.dfm</Transaction>
+    <Transaction>2021/08/30 22:34:13.000.180,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\CadastroSimples.dproj</Transaction>
+    <Transaction>2021/08/30 23:09:26.000.001,=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\Unit2.pas</Transaction>
+    <Transaction>2021/08/30 23:11:55.000.063,C:\Users\Criacao\Desktop\Live3108\CadastroSimples\Unit2.pas=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\CadastroSimples.Clientes.pas</Transaction>
+    <Transaction>2021/08/30 23:15:41.000.127,=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\Unit2.pas</Transaction>
+    <Transaction>2021/08/30 23:17:47.000.716,C:\Users\Criacao\Desktop\Live3108\CadastroSimples\Unit2.pas=C:\Users\Criacao\Desktop\Live3108\CadastroSimples\CadastroSimples.ClientesDTO.pas</Transaction>
+  </Transactions>
+</BorlandProject>

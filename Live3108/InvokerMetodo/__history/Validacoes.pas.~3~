@@ -1,0 +1,36 @@
+unit Validacoes;
+
+interface
+
+uses
+  System.Generics.Collections, System.SysUtils;
+
+type
+  TValidacoes = class
+  private
+    FList : TList<String>;
+    FResult : TProc<String>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function AddValidacao(aValue : String) : TValidacoes;
+    function ResultDisplay(aVAlue : TProc<String>) : TValidacoes;
+  end;
+
+implementation
+
+{ TValidacoes }
+
+constructor TValidacoes.Create;
+begin
+
+end;
+
+destructor TValidacoes.Destroy;
+begin
+
+  inherited;
+end;
+
+end.

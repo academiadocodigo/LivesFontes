@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2009/11/05 10:54:23.945.pas,C:\Users\user\Documents\RAD Studio\Projects\Unit1.pas=C:\Paulo\ClubeDelphi\Artigos\CustomAttributes\Unit1.pas</Transaction>
+    <Transaction>2009/11/05 10:54:23.945.dfm,C:\Users\user\Documents\RAD Studio\Projects\Unit1.dfm=C:\Paulo\ClubeDelphi\Artigos\CustomAttributes\Unit1.dfm</Transaction>
+    <Transaction>2009/11/05 10:54:25.862.dproj,C:\Users\user\Documents\RAD Studio\Projects\Project1.dproj=C:\Paulo\ClubeDelphi\Artigos\CustomAttributes\Project1.dproj</Transaction>
+    <Transaction>2021/08/30 16:36:25.000.035,C:\Users\Criacao\Desktop\Live3108\GenericsRTTI\CustomAttributes\Project1.dproj=C:\Users\Criacao\Desktop\Live3108\GenericsRTTI\CustomAttributes\CustomAttribute.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

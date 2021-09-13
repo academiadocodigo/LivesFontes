@@ -1,0 +1,44 @@
+unit CadastroSimples.ClientesDTO;
+
+interface
+
+uses
+  CadastroSimples.Clientes;
+
+type
+  iClientesDTO = interface
+    function Codigo(Value : Integer) : iClientesDTO;
+    function Nome(Value : String): iClientesDTO;
+    function EstadoCivil(Value : String): iClientesDTO;
+    function Sexo(Value : String): iClientesDTO;
+    function DataNascimento(Value : TDateTime): iClientesDTO;
+    function Build : TClientes;
+  end;
+
+  TClientesDTO = class(TInterfacedObject, iClientesDTO)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iClientesDTO;
+  end;
+
+implementation
+
+constructor TClientesDTO.Create;
+begin
+
+end;
+
+destructor TClientesDTO.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TClientesDTO.New : iClientesDTO;
+begin
+  Result := Self.Create;
+end;
+
+end.

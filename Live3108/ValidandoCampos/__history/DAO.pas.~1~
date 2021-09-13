@@ -1,0 +1,42 @@
+unit DAO;
+
+interface
+
+type
+  iDao = Interface
+    procedure Salvar;
+  End;
+
+  TDAO<T : Class> = class(TInterfacedObject, iDao)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : iDao;
+      procedure Salvar;
+  end;
+
+implementation
+
+constructor TDAO<T>.Create;
+begin
+
+end;
+
+destructor TDAO<T>.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TDAO<T>.New : iDao;
+begin
+  Result := Self.Create;
+end;
+
+procedure TDAO<T>.Salvar;
+begin
+
+end;
+
+end.

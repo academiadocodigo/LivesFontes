@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/18 13:30:13.000.280,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/18 14:14:49.000.524,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/30 22:08:25.000.578,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/30 22:08:50.000.177,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Criacao\Desktop\Live3108\ExemploSemRTTI\Unit1.pas</Transaction>
+    <Transaction>2021/08/30 22:08:50.000.177,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Criacao\Desktop\Live3108\ExemploSemRTTI\Unit1.dfm</Transaction>
+    <Transaction>2021/08/30 22:08:56.000.974,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Criacao\Desktop\Live3108\ExemploSemRTTI\ExemploSemRTTI.dproj</Transaction>
+    <Transaction>2021/08/30 22:33:35.000.582,C:\Users\Criacao\Desktop\Live3108\ExemploSemRTTI\ExemploSemRTTI.dproj=C:\Users\Criacao\Desktop\Live3108\ExemploSemRTTI\ExemploCustomRTTI.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0732DD7A-FAC7-4CA5-9681-0900E5014CCD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CadastroSimples\CadastroSimples.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExemploSemRTTI\ExemploCustomRTTI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ValidandoCampos\validandoCampos.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="InvokerMetodo\InvokerMetodo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CustomAttributes\CustomAttribute.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CadastroSimples">
+        <MSBuild Projects="CadastroSimples\CadastroSimples.dproj"/>
+    </Target>
+    <Target Name="CadastroSimples:Clean">
+        <MSBuild Projects="CadastroSimples\CadastroSimples.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CadastroSimples:Make">
+        <MSBuild Projects="CadastroSimples\CadastroSimples.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExemploCustomRTTI">
+        <MSBuild Projects="ExemploSemRTTI\ExemploCustomRTTI.dproj"/>
+    </Target>
+    <Target Name="ExemploCustomRTTI:Clean">
+        <MSBuild Projects="ExemploSemRTTI\ExemploCustomRTTI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExemploCustomRTTI:Make">
+        <MSBuild Projects="ExemploSemRTTI\ExemploCustomRTTI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="validandoCampos">
+        <MSBuild Projects="ValidandoCampos\validandoCampos.dproj"/>
+    </Target>
+    <Target Name="validandoCampos:Clean">
+        <MSBuild Projects="ValidandoCampos\validandoCampos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="validandoCampos:Make">
+        <MSBuild Projects="ValidandoCampos\validandoCampos.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InvokerMetodo">
+        <MSBuild Projects="InvokerMetodo\InvokerMetodo.dproj"/>
+    </Target>
+    <Target Name="InvokerMetodo:Clean">
+        <MSBuild Projects="InvokerMetodo\InvokerMetodo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InvokerMetodo:Make">
+        <MSBuild Projects="InvokerMetodo\InvokerMetodo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CustomAttribute">
+        <MSBuild Projects="CustomAttributes\CustomAttribute.dproj"/>
+    </Target>
+    <Target Name="CustomAttribute:Clean">
+        <MSBuild Projects="CustomAttributes\CustomAttribute.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CustomAttribute:Make">
+        <MSBuild Projects="CustomAttributes\CustomAttribute.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CadastroSimples;ExemploCustomRTTI;validandoCampos;InvokerMetodo;CustomAttribute"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CadastroSimples:Clean;ExemploCustomRTTI:Clean;validandoCampos:Clean;InvokerMetodo:Clean;CustomAttribute:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CadastroSimples:Make;ExemploCustomRTTI:Make;validandoCampos:Make;InvokerMetodo:Make;CustomAttribute:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

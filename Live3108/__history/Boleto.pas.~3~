@@ -1,0 +1,98 @@
+unit Boleto;
+
+interface
+
+uses
+  typinfo,
+  System.SysUtils,
+  Vcl.Dialogs,
+  System.Variants,
+  Attributes;
+
+type
+  TBoleto = class
+  private
+    FDescDoc: string;
+    FCodigoBanco: integer;
+    FValorEfetivo: real;
+    FDataVenc: TDateTime;
+
+    procedure ValidarDados;
+  published
+    [TDescricao('Descrição do documento')]
+    property DescDoc: string read FDescDoc write FDescDoc;
+    [TDescricao('Código da instituição bancária')]
+    property CodigoBanco: integer read FCodigoBanco write FCodigoBanco;
+    [TDescricao('Valor do boleto')]
+    property ValorEfetivo: real read FValorEfetivo write FValorEfetivo;
+    [TDescricao('Data de vencimento do boleto')]
+    property DataVenc: TDateTime read FDataVenc write FDataVenc;
+  public
+    procedure Salvar;
+  end;
+
+implementation
+
+{ TBoleto }
+
+procedure TBoleto.Salvar;
+begin
+  ValidarDados;
+end;
+
+//
+//  Implementações erradas do dia a dia
+//
+//procedure TBoleto.ValidarDados;
+//begin
+//  if FDescDoc = EmptyStr then
+//  begin
+//    ShowMessage('Valor não preenchido: Descrição');
+//    Abort;
+//  end;
+//
+//  if FCodigoBanco = 0 then
+//  begin
+//    ShowMessage('Valor não preenchido: Código do banco');
+//    Abort;
+//  end;
+//
+//  if FValorEfetivo <= 0 then
+//  begin
+//    ShowMessage('Valor não preenchido: Valor');
+//    Abort;
+//  end;
+//
+//  if DataVenc = 0 then
+//  begin
+//    ShowMessage('Valor não preenchido: Data de Vencimento');
+//    Abort;
+//  end;
+//end;
+
+procedure TBoleto.ValidarDados;
+var
+  ListaPropriedades: TPropList;
+  Contador: Integer;
+  Preenchido: Boolean;
+  Valor: Variant;
+begin
+  //Preenche uma lista com as propriedades do objeto
+  GetPropList(TypeInfo(TBoleto), tkAny, @ListaPropriedades);
+
+  //Executa um loop nas propriedades do objeto
+  for Contador := Low(ListaPropriedades) to High(ListaPropriedades) do begin
+    //obtem o valor da propriedade
+    Valor := GetPropValue(Self, ListaPropriedades[Contador]^.Name);
+
+    //Valida o valor, exiginfo que seja diferente de 0 e diferente de vazio
+    Preenchido := (VarToStr(Valor) <> EmptyStr) and (VarToStr(Valor) <> '0');
+
+    if not Preenchido then begin
+      ShowMessage('Valor não preenchido: ' + ListaPropriedades[Contador]^.Name);
+      Abort;
+    end;
+  end;
+end;
+
+end.

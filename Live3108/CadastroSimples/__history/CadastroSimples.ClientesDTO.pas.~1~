@@ -1,0 +1,20 @@
+unit CadastroSimples.ClientesDTO;
+
+interface
+
+uses
+  CadastroSimples.Clientes;
+
+type
+  iClientesDTO = interface
+    function Codigo(Value : Integer) : iClientesDTO;
+    function Nome(Value : String): iClientesDTO;
+    function EstadoCivil(Value : String): iClientesDTO;
+    function Sexo(Value : String): iClientesDTO;
+    function DataNascimento(Value : TDateTime): iClientesDTO;
+    function Build : TClientes;
+  end;
+
+implementation
+
+end.

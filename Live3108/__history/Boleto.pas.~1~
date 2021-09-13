@@ -1,0 +1,63 @@
+unit Boleto;
+
+interface
+
+uses
+  System.SysUtils,
+  Vcl.Dialogs;
+
+type
+  TBoleto = class
+  private
+    FDescDoc: string;
+    FCodigoBanco: integer;
+    FValorEfetivo: real;
+    FDataVenc: TDateTime;
+
+    procedure ValidarDados;
+  published
+    property DescDoc: string read FDescDoc write FDescDoc;
+    property CodigoBanco: integer read FCodigoBanco write FCodigoBanco;
+    property ValorEfetivo: real read FValorEfetivo write FValorEfetivo;
+    property DataVenc: TDateTime read FDataVenc write FDataVenc;
+  public
+    procedure Salvar;
+  end;
+
+implementation
+
+{ TBoleto }
+
+procedure TBoleto.Salvar;
+begin
+
+end;
+
+procedure TBoleto.ValidarDados;
+begin
+  if FDescDoc = EmptyStr then
+  begin
+    ShowMessage('Valor não preenchido: Descrição');
+    Abort;
+  end;
+
+  if FCodigoBanco = 0 then
+  begin
+    ShowMessage('Valor não preenchido: Código do banco');
+    Abort;
+  end;
+
+  if FValorEfetivo <= 0 then
+  begin
+    ShowMessage('Valor não preenchido: Valor');
+    Abort;
+  end;
+
+  if DataVenc = 0 then
+  begin
+    ShowMessage('Valor não preenchido: Data de Vencimento');
+    Abort;
+  end;
+end;
+
+end.
