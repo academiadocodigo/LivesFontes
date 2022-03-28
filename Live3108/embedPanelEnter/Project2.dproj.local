@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/08/24 08:27:30.000.853,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/08/29 11:47:01.000.053,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/09/03 15:14:34.000.411,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2018/09/03 15:14:39.000.036,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\ServerConst1.pas</Transaction>
+    <Transaction>2018/09/05 13:36:17.000.627,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/09/18 13:58:48.000.199,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/09/29 15:27:07.000.228,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/11/01 11:16:12.000.155,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/11/01 11:18:10.000.275,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/11/29 17:52:11.000.213,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/12/12 11:07:54.731,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/12/12 13:20:56.848,=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2018/12/12 13:50:05.964,C:\Analises\embedPanelEnter\Unit2.pas=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/12/12 13:50:06.000,C:\Analises\embedPanelEnter\Unit2.dfm=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2018/12/12 13:50:08.885,C:\Analises\embedPanelEnter\Unit3.pas=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2018/12/12 13:50:08.885,C:\Analises\embedPanelEnter\Unit3.dfm=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2018/12/12 13:50:11.578,C:\Analises\embedPanelEnter\Project2.dproj=C:\Users\Developer\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
